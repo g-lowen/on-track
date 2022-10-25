@@ -1,3 +1,78 @@
 .home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+
+  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+    url("/img/train-track.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
+}
+
+.heading-row,
+.row {
+  border-bottom: 0.2px solid var(--main5);
+  display: grid;
+  grid-template-columns: auto 31px 31px 31px 31px;
+  max-width: 500px;
+  width: 100%;
+}
+.row:hover {
+  background-color: var(--main1);
+}
+
+.row-item-1 {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+}
+
+.link:hover {
+  /* color: var(--main5); */
+  text-decoration: underline;
+}
+
+.row-item-2,
+.row-item-3,
+.row-item-4,
+.row-item-5,
+.row-item-6 {
+  align-self: center;
+  justify-self: center;
+  margin: 10px;
+}
+
+.player-icon {
+  height: 31px;
+  margin: auto 5px auto 5px;
+  width: 31px;
+}
+
+@media (min-width: 769px) {
+  .home {
+    padding-top: 5%;
+  }
+
+  .heading-row,
+  .row {
+    grid-template-columns: auto 36px 36px 36px 36px 36px;
+  }
+
+  .row-item-2,
+  .row-item-3,
+  .row-item-4,
+  .row-item-5,
+  .row-item-6 {
+    margin: 16px;
+  }
+
+  .player-icon {
+    height: 46px;
+    margin: auto 10px auto 10px;
+    width: 46px;
+  }
 }

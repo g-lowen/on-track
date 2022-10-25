@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom"
-import "./App.css"
 import { ContextProvider } from "./communication/Context"
 import Home from "./home/Home"
 import Navbar from "./navbar/Navbar"
@@ -9,7 +8,7 @@ function App() {
   return (
     <ContextProvider>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/:playerName" element={<Player />}></Route>

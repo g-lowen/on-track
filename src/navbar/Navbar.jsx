@@ -1,7 +1,11 @@
 import styles from "./Navbar.module.css"
 
 function Navbar() {
-  return <div className={`${styles["navbar"]}`}>test</div>
+  return (
+    <section className={`${styles["navbar"]}`}>
+      <h1>Vilka vinner På spåret?</h1>
+    </section>
+  )
 }
 
 export default Navbar

@@ -1,4 +1,5 @@
 .navbar {
-  background-color: pink;
-  height: 100px;
+  /* background-color: var(--main1); */
+  padding: 2%;
+  text-align: center;
 }

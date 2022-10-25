@@ -9,10 +9,12 @@ function useAppContext() {
 
 function ContextProvider({ children }) {
   const [playerBets, setPlayerBets] = useState([])
+  const [playerInfo, setPlayerInfo] = useState([])
   const [results, setResults] = useState([])
 
   const context = {
     playerBets: playerBetsContext(),
+    playerInfo: playerInfoContext(),
     results: resultsContext()
   }
 
@@ -21,12 +23,33 @@ function ContextProvider({ children }) {
   // ------------------------------------------------------
   function playerBetsContext() {
     useEffect(() => {
-      axios.get("/PlayerBets.json").then((result) => {
-        setPlayerBets(result.data.playerBets)
-        console.log("PlayerBets: ", result.data.playerBets)
-      })
+      const fetchData = async () => {
+        await axios.get("/PlayerBets.json").then((result) => {
+          setPlayerBets(result.data.players)
+        })
+      }
+
+      fetchData()
     }, [])
     return playerBets
+  }
+  function playerInfoContext() {
+    useEffect(() => {
+      const fetchData = async () => {
+        await axios.get("/PlayerBets.json").then((result) => {
+          let players = []
+
+          result.data.players.forEach((player) => {
+            players.push(player.playerInfo)
+          })
+
+          setPlayerInfo(players)
+        })
+      }
+
+      fetchData()
+    }, [])
+    return playerInfo
   }
 
   // ------------------------------------------------------
@@ -36,7 +59,6 @@ function ContextProvider({ children }) {
     useEffect(() => {
       axios.get("/Results.json").then((result) => {
         setResults(result.data.results)
-        console.log("Results: ", result.data.results)
       })
     }, [])
     return results
