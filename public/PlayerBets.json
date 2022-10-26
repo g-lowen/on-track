@@ -234,5 +234,71 @@
         "p4": "Marie Agerhäll & Fritte Fritzson"
       }
     }
+  ],
+  "betsTableGroup": [
+    {
+      "g11": [
+        "Marie Agerhäll & Fritte Fritzson",
+        "Hanna Hellquist & Ina Lundström",
+        "18 november 2022",
+        "Gruppspel"
+      ],
+      "g12": [
+        "Hanna Hellquist & Ina Lundström",
+        "Niklas Källner & Lena Nordlund",
+        "26 november 2022",
+        "Gruppspel"
+      ],
+      "g13": [
+        "Niklas Källner & Lena Nordlund",
+        "Marie Agerhäll & Fritte Fritzson",
+        "2 december 2022",
+        "Gruppspel"
+      ],
+      "g21": [
+        "Christopher Garplind & Emma Peters",
+        "Hasse Aro & Camilla Läckberg",
+        "16 december 2022",
+        "Gruppspel"
+      ],
+      "g22": [
+        "Hasse Aro & Camilla Läckberg",
+        "Cecilia Düringer & Jonatan Unge",
+        "23 december 2022",
+        "Gruppspel"
+      ],
+      "g23": [
+        "Cecilia Düringer & Jonatan Unge",
+        "Christopher Garplind & Emma Peters",
+        "30 december 2022",
+        "Gruppspel"
+      ],
+      "g31": [
+        "Jason Diakité & Marcus Samuelsson",
+        "Marit Bergman & Karin Bojs",
+        "6 januari 2023",
+        "Gruppspel"
+      ],
+      "g32": [
+        "Johar Bendjelloul & Josefin Johansson",
+        "Jason Diakité & Marcus Samuelsson",
+        "13 januari 2023",
+        "Gruppspel"
+      ],
+      "g33": [
+        "Marit Bergman & Karin Bojs",
+        "Johar Bendjelloul & Josefin Johansson",
+        "20 januari 2023",
+        "Gruppspel"
+      ]
+    }
+  ],
+  "betsTablePlayoffs": [
+    {
+      "p1": ["p1", "27 januari 2023", "Andra chansen"],
+      "p2": ["p2", "3 februari 2023", "Semifinal"],
+      "p3": ["p3", "10 februari 2023", "Semifinal"],
+      "p4": ["p4", "17 februari 2023", "Final"]
+    }
   ]
 }

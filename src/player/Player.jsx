@@ -9,31 +9,15 @@ function Player() {
   const navigate = useNavigate()
   const { playerBets } = useAppContext().context
   const contentRef = useRef("")
-  const [isLoading, setIsLoading] = useState(true)
-
-  playerBets.forEach((player) => {
-    if (!player.playerInfo.name === param) return
-    // setPlayerImage(param)
-    // return playerBets
-
-    // console.log(player.playerInfo.name)
-  })
+  // const [isLoading, setIsLoading] = useState(true)
 
   const findPlayer = playerBets.find(
     (player) => player.playerInfo.name === param
   )
-  const something = []
-  Object.keys(findPlayer.bets).map((test) => {
-    // console.log(test)
-    if (test.startsWith("p")) {
-      // console.log(test)
-      something.push(test)
-    }
-  })
-  console.log(something)
 
-  // console.log(findPlayer.bets)
   const playerImage = findPlayer.playerInfo.iconLarge
+
+  console.log(playerBets)
 
   const betsTableGroup = [
     {
@@ -96,10 +80,10 @@ function Player() {
 
   const betsTablePlayoffs = [
     {
-      p1: ["Marit Bergman & Karin Bojs", "27 januari 2023", "Andra chansen"],
-      p2: ["-", "3 februari 2023", "Semifinal"],
-      p3: ["-", "10 februari 2023", "Semifinal"],
-      p4: ["-", "17 februari 2023", "Final"]
+      p1: ["p1", "27 januari 2023", "Andra chansen"],
+      p2: ["p2", "3 februari 2023", "Semifinal"],
+      p3: ["p3", "10 februari 2023", "Semifinal"],
+      p4: ["p4", "17 februari 2023", "Final"]
     }
   ]
 
@@ -113,17 +97,17 @@ function Player() {
         >
           x
         </button>
+        <img
+          className={`${styles["player-icon"]}`}
+          src={playerImage}
+          alt="Icon"
+        />
         <h1
           className={`${styles["player-heading"]}`}
           style={{ color: `var(--${paramLowerCase})` }}
         >
           {param}
         </h1>
-        <img
-          className={`${styles["player-icon"]}`}
-          src={playerImage}
-          alt="Icon"
-        />
         <p
           className={styles["player-text"]}
           style={{ color: `var(--${paramLowerCase})` }}
@@ -206,17 +190,6 @@ function Player() {
           return (
             <div key={index}>
               {Object.values(match).map((teams, index) => {
-                // console.log(teams)
-                // console.log("Här", Object.values(findPlayer.bets))
-                // Object.values(findPlayer.bets).map((m) => {
-                //   console.log("m", m)
-                //   console.log("teams[0]", teams[0])
-                //   if (m === teams[0]) {
-                //     console.log(m)
-                //     test = m
-                //   }
-                //   return test
-                // })
                 return (
                   <div className={`${styles["row-playoffs"]}`} key={index}>
                     <div className={`${styles["row-item"]} ${styles["first"]}`}>
@@ -237,7 +210,17 @@ function Player() {
                       {teams[2]}
                     </div>
                     <div className={`${styles["row-item"]} ${styles["last"]}`}>
-                      {}
+                      {Object.keys(findPlayer.bets).map((objKey, index) => {
+                        if (objKey === "p1" && objKey === teams[0]) {
+                          return <div key={index}>{findPlayer.bets.p1}</div>
+                        } else if (objKey === "p2" && objKey === teams[0]) {
+                          return <div key={index}>{findPlayer.bets.p2}</div>
+                        } else if (objKey === "p3" && objKey === teams[0]) {
+                          return <div key={index}>{findPlayer.bets.p3}</div>
+                        } else if (objKey === "p4" && objKey === teams[0]) {
+                          return <div key={index}>{findPlayer.bets.p4}</div>
+                        }
+                      })}
 
                       <div
                         className={styles["picked"]}

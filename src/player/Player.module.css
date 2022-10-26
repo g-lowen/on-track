@@ -157,13 +157,13 @@
   .heading-row,
   .row {
     grid-template-columns:
-      calc(32px + 32px) calc(144px + 32px) calc(96px + 32px)
+      calc(32px + 32px) calc(144px + 32px) calc(120px + 32px)
       1fr 1fr;
   }
 
   .row-playoffs {
     grid-template-columns:
-      calc(32px + 32px) calc(144px + 32px) calc(96px + 32px)
+      calc(32px + 32px) calc(144px + 32px) calc(120px + 32px)
       1fr;
   }
 
