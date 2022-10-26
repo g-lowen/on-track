@@ -63,6 +63,14 @@
   width: 100%;
 }
 
+.guess-marks {
+  /* list-style-type: none; */
+}
+
+.guess-mark {
+  position: relative;
+}
+
 .arrow {
   border-style: solid;
   border-width: 0 6px 6px 0;
@@ -127,12 +135,13 @@
 }
 
 #cross {
-  bottom: 2%;
+  bottom: 0%;
   color: #b34327;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 600;
   font-family: Sans-serif;
   position: absolute;
+  width: 100%;
 }
 
 @media (min-width: 769px) {

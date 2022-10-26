@@ -33,6 +33,7 @@
 
 .link:hover {
   /* color: var(--main5); */
+  cursor: pointer;
   text-decoration: underline;
 }
 

@@ -7,17 +7,16 @@ function Player() {
   const param = useParams().playerName
   const paramLowerCase = param.toLowerCase()
   const navigate = useNavigate()
-  const { playerBets } = useAppContext().context
+  const { playerBets, results } = useAppContext().context
   const contentRef = useRef("")
   // const [isLoading, setIsLoading] = useState(true)
 
+  // console.log(results)
   const findPlayer = playerBets.find(
     (player) => player.playerInfo.name === param
   )
 
   const playerImage = findPlayer.playerInfo.iconLarge
-
-  console.log(playerBets)
 
   const betsTableGroup = [
     {
@@ -25,55 +24,64 @@ function Player() {
         "Marie Agerhäll & Fritte Fritzson",
         "Hanna Hellquist & Ina Lundström",
         "18 november 2022",
-        "Gruppspel"
+        "Gruppspel",
+        "0"
       ],
       g12: [
         "Hanna Hellquist & Ina Lundström",
         "Niklas Källner & Lena Nordlund",
         "26 november 2022",
-        "Gruppspel"
+        "Gruppspel",
+        "1"
       ],
       g13: [
         "Niklas Källner & Lena Nordlund",
         "Marie Agerhäll & Fritte Fritzson",
         "2 december 2022",
-        "Gruppspel"
+        "Gruppspel",
+        "2"
       ],
       g21: [
         "Christopher Garplind & Emma Peters",
         "Hasse Aro & Camilla Läckberg",
         "16 december 2022",
-        "Gruppspel"
+        "Gruppspel",
+        "3"
       ],
       g22: [
         "Hasse Aro & Camilla Läckberg",
         "Cecilia Düringer & Jonatan Unge",
         "23 december 2022",
-        "Gruppspel"
+        "Gruppspel",
+        "4"
       ],
       g23: [
         "Cecilia Düringer & Jonatan Unge",
         "Christopher Garplind & Emma Peters",
         "30 december 2022",
-        "Gruppspel"
+        "Gruppspel",
+        "5"
       ],
       g31: [
         "Jason Diakité & Marcus Samuelsson",
         "Marit Bergman & Karin Bojs",
         "6 januari 2023",
-        "Gruppspel"
+        "Gruppspel",
+        "6"
       ],
       g32: [
         "Johar Bendjelloul & Josefin Johansson",
         "Jason Diakité & Marcus Samuelsson",
         "13 januari 2023",
-        "Gruppspel"
+        "Gruppspel",
+        "7"
       ],
       g33: [
         "Marit Bergman & Karin Bojs",
         "Johar Bendjelloul & Josefin Johansson",
         "20 januari 2023",
-        "Gruppspel"
+        "Gruppspel",
+        "8"
       ]
     }
   ]
@@ -117,6 +125,23 @@ function Player() {
           repellendus distinctio sed, neque, ab incidunt laborum expedita
           deserunt totam necessitatibus modi.
         </p>
+        {/* om du orkar: förtydliga de olika markeringarna */}
+        {/* <ul className={styles["guess-marks"]}>
+          <li className={styles["guess-mark"]}>
+            <div className={styles["check"]}></div>
+          </li>
+          <li className={styles["guess-mark"]}>
+            <div id={styles["cross"]}>x</div>
+          </li>
+          <li className={styles["guess-mark"]}>
+            <div
+              className={styles["picked"]}
+              style={{
+                backgroundColor: `var(--${paramLowerCase})`
+              }}
+            ></div>
+          </li>
+        </ul> */}
         <button
           className={`${styles["skip-content-btn"]} ${"mob"}`}
           onClick={() =>
@@ -167,18 +192,49 @@ function Player() {
                     </div>
                     <div className={`${styles["row-item"]} `}>
                       {teams[0]}
+                      {Object.values(findPlayer.bets).map((objValue, index) => {
+                        if (
+                          teams[0] === objValue &&
+                          JSON.stringify(index) === teams[4]
+                        ) {
+                          return (
+                            <div
+                              className={styles["picked"]}
+                              key={index}
+                              style={{
+                                backgroundColor: `var(--${paramLowerCase})`
+                              }}
+                            ></div>
+                          )
+                        }
+                      })}
+                    </div>
+                    <div className={`${styles["row-item"]} ${styles["last"]}`}>
+                      {teams[1]}
+                      {Object.values(findPlayer.bets).map((objValue, index) => {
+                        if (
+                          teams[1] === objValue &&
+                          JSON.stringify(index) === teams[4]
+                        ) {
+                          return (
+                            <div
+                              className={styles["picked"]}
+                              key={index}
+                              style={{
+                                backgroundColor: `var(--${paramLowerCase})`
+                              }}
+                            ></div>
+                          )
+                        }
+                      })}
+                      {/* <div className={styles["check"]}></div>
+                      <div id={styles["cross"]}>x</div>
                       <div
                         className={styles["picked"]}
                         style={{
                           backgroundColor: `var(--${paramLowerCase})`
                         }}
-                      ></div>
-                    </div>
-                    <div className={`${styles["row-item"]} ${styles["last"]}`}>
-                      {teams[1]}
-                      {/* jämföra med resultatet ? x : x > default */}
-                      {/* <div id={styles["cross"]}>x</div> */}
-                      <div className={styles["check"]}></div>
+                      ></div>*/}
                     </div>
                   </div>
                 )
