@@ -7,7 +7,7 @@
         "iconLarge": "/img/players/elin-icon.png",
         "win": 2,
         "loss": 4,
-        "percent": 0,
+        "percent": 33,
         "points": 2
       },
       "bets": {
@@ -33,7 +33,7 @@
         "iconLarge": "/img/players/fabian-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
@@ -59,7 +59,7 @@
         "iconLarge": "/img/players/fanni-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
@@ -85,7 +85,7 @@
         "iconLarge": "/img/players/gustav-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
@@ -111,7 +111,7 @@
         "iconLarge": "/img/players/irma-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
@@ -137,7 +137,7 @@
         "iconLarge": "/img/players/markus-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
@@ -163,7 +163,7 @@
         "iconLarge": "/img/players/oskar-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
@@ -189,7 +189,7 @@
         "iconLarge": "/img/players/selma-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
@@ -215,7 +215,7 @@
         "iconLarge": "/img/players/valle-icon.png",
         "win": 4,
         "loss": 2,
-        "percent": 0,
+        "percent": 67,
         "points": 4
       },
       "bets": {
