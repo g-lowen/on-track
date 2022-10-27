@@ -7,15 +7,9 @@ function Player() {
   const param = useParams().playerName
   const paramLowerCase = param.toLowerCase()
   const navigate = useNavigate()
-  const { playerBets, results } = useAppContext().context
+  const { players, results } = useAppContext().context
   const contentRef = useRef("")
-  // const [isLoading, setIsLoading] = useState(true)
-
-  // console.log(results)
-  const findPlayer = playerBets.find(
-    (player) => player.playerInfo.name === param
-  )
-
+  const findPlayer = players.find((player) => player.playerInfo.name === param)
   const playerImage = findPlayer.playerInfo.iconLarge
 
   const betsTableGroup = [

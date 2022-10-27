@@ -1,11 +1,9 @@
 import styles from "./Home.module.css"
 import { useAppContext } from "../communication/Context"
-import { useEffect, useState, useRef } from "react"
 import { Link } from "react-router-dom"
 
 function Home() {
-  const { results, playerBets } = useAppContext().context
-  const { sort, setSort } = useState("points")
+  const { results, players } = useAppContext().context
 
   // count matches
   let sumMatches = 0
@@ -14,44 +12,33 @@ function Home() {
     sumMatches += 1
   })
 
+  // sort based on points
+  players.sort((p1, p2) =>
+    p1.playerInfo.points < p2.playerInfo.points
+      ? 1
+      : p1.playerInfo.points > p2.playerInfo.points
+      ? -1
+      : 0
+  )
+
   return (
     <section className={`${styles["home"]}`}>
       <div className={`${styles["heading-row"]}`}>
-        <div
-          className={`${styles["row-item"]} ${styles["row-item-1"]} ${styles["link"]}`}
-        >
+        <div className={`${styles["row-item"]} ${styles["row-item-1"]}`}>
           Namn
         </div>
+        <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>M</div>
+        <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>W</div>
+        <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>L</div>
         <div
-          className={`${styles["row-item"]} ${styles["row-item-2"]} ${styles["link"]}`}
-        >
-          M
-        </div>
-        <div
-          className={`${styles["row-item"]} ${styles["row-item-3"]} ${styles["link"]}`}
-        >
-          W
-        </div>
-        <div
-          className={`${styles["row-item"]} ${styles["row-item-4"]} ${styles["link"]}`}
-        >
-          L
-        </div>
-        <div
-          className={`${styles["row-item"]} ${styles["row-item-5"]} ${"desk"} ${
-            styles["link"]
-          }`}
+          className={`${styles["row-item"]} ${styles["row-item-5"]} ${"desk"}`}
         >
           %
         </div>
-        <div
-          className={`${styles["row-item"]} ${styles["row-item-6"]} ${styles["link"]}`}
-        >
-          P
-        </div>
+        <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>P</div>
       </div>
-      {playerBets.map((player, index) => {
-        const { playerInfo, bets } = player
+      {players.map((player, index) => {
+        const { playerInfo } = player
 
         return (
           <div className={`${styles["row"]}`} key={index}>
@@ -70,8 +57,7 @@ function Home() {
               {sumMatches}
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
-              {/* {!test === "" ? playerInfo.loss : playerInfo.win} */}
-              {10}
+              {playerInfo.win}
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
               {playerInfo.loss}
@@ -81,7 +67,7 @@ function Home() {
                 styles["row-item-5"]
               }  ${"desk"}`}
             >
-              {playerInfo.percent}
+              {playerInfo.percent}%
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
               {playerInfo.points}

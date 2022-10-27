@@ -8,48 +8,28 @@ function useAppContext() {
 }
 
 function ContextProvider({ children }) {
-  const [playerBets, setPlayerBets] = useState([])
-  const [playerInfo, setPlayerInfo] = useState([])
+  const [players, setPlayers] = useState([])
   const [results, setResults] = useState([])
 
   const context = {
-    playerBets: playerBetsContext(),
-    playerInfo: playerInfoContext(),
+    players: playersContext(),
     results: resultsContext()
   }
 
   // ------------------------------------------------------
   // PlayerBets Context
   // ------------------------------------------------------
-  function playerBetsContext() {
+  function playersContext() {
     useEffect(() => {
       const fetchData = async () => {
         await axios.get("/PlayerBets.json").then((result) => {
-          setPlayerBets(result.data.players)
+          setPlayers(result.data.players)
         })
       }
 
       fetchData()
     }, [])
-    return playerBets
-  }
-  function playerInfoContext() {
-    useEffect(() => {
-      const fetchData = async () => {
-        await axios.get("/PlayerBets.json").then((result) => {
-          let players = []
-
-          result.data.players.forEach((player) => {
-            players.push(player.playerInfo)
-          })
-
-          setPlayerInfo(players)
-        })
-      }
-
-      fetchData()
-    }, [])
-    return playerInfo
+    return players
   }
 
   // ------------------------------------------------------
