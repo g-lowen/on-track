@@ -8,28 +8,29 @@ function useAppContext() {
 }
 
 function ContextProvider({ children }) {
-  const [players, setPlayers] = useState([])
+  const [bettingData, setBettingData] = useState([])
   const [results, setResults] = useState([])
 
   const context = {
-    players: playersContext(),
+    bettingData: bettingContext(),
     results: resultsContext()
   }
 
   // ------------------------------------------------------
-  // PlayerBets Context
+  // Betting Context
   // ------------------------------------------------------
-  function playersContext() {
+
+  function bettingContext() {
     useEffect(() => {
       const fetchData = async () => {
         await axios.get("/PlayerBets.json").then((result) => {
-          setPlayers(result.data.players)
+          setBettingData(result.data)
         })
       }
 
       fetchData()
     }, [])
-    return players
+    return bettingData
   }
 
   // ------------------------------------------------------

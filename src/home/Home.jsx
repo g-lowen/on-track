@@ -3,17 +3,18 @@ import { useAppContext } from "../communication/Context"
 import { Link } from "react-router-dom"
 
 function Home() {
-  const { results, players } = useAppContext().context
+  const { results, bettingData } = useAppContext().context
 
   // count matches
   let sumMatches = 0
   Object.keys(results).forEach(function (key) {
+    // Checks if the value is true. If so, +1 to sumMatches
     if (!results[key]) return
     sumMatches += 1
   })
 
   // sort based on points
-  players.sort((p1, p2) =>
+  bettingData?.players?.sort((p1, p2) =>
     p1.playerInfo.points < p2.playerInfo.points
       ? 1
       : p1.playerInfo.points > p2.playerInfo.points
@@ -37,7 +38,7 @@ function Home() {
         </div>
         <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>P</div>
       </div>
-      {players.map((player, index) => {
+      {bettingData?.players?.map((player, index) => {
         const { playerInfo } = player
 
         return (
