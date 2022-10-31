@@ -16,15 +16,17 @@ function Player() {
 
   const betKeys = []
   const correctBets = []
-
-  Object.keys(findPlayer?.bets).map((betKey) => betKeys.push(betKey))
-  for (let i = 0; i < betKeys.length; i++) {
-    if (results[betKeys[i]] === false) {
-      correctBets.push("Not played")
-    } else if (findPlayer?.bets[betKeys[i]] === results[betKeys[i]]) {
-      correctBets.push(true)
-    } else {
-      correctBets.push(false)
+  
+  if (findPlayer) {
+    Object.keys(findPlayer?.bets).map((betKey) => betKeys.push(betKey))
+    for (let i = 0; i < betKeys.length; i++) {
+      if (results[betKeys[i]] === false) {
+        correctBets.push("Not played")
+      } else if (findPlayer?.bets[betKeys[i]] === results[betKeys[i]]) {
+        correctBets.push(true)
+      } else {
+        correctBets.push(false)
+      }
     }
   }
 
