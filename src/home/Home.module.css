@@ -6,7 +6,7 @@
 
   background-attachment: fixed;
   background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
-    url("/img/train-track.png");
+    url("/img/train-track-sm.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,6 +55,8 @@
 
 @media (min-width: 769px) {
   .home {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-m.png");
     padding-top: 5%;
   }
 
@@ -75,5 +77,19 @@
     height: 46px;
     margin: auto 10px auto 10px;
     width: 46px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-l.png");
+  }
+}
+
+@media (min-width: 1920px) {
+  .home {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-xl.png");
   }
 }

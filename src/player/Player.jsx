@@ -1,6 +1,6 @@
 import styles from "./Player.module.css"
 import { useParams, useNavigate } from "react-router-dom"
-import { useState, useRef, useEffect } from "react"
+import { useRef } from "react"
 import { useAppContext } from "../communication/Context"
 
 function Player() {
@@ -14,9 +14,9 @@ function Player() {
   )
   const playerImage = findPlayer?.playerInfo?.iconLarge
 
+  // comparing player bets with results and pushing outcome into a new array
   const betKeys = []
   const correctBets = []
-  
   if (findPlayer) {
     Object.keys(findPlayer?.bets).map((betKey) => betKeys.push(betKey))
     for (let i = 0; i < betKeys.length; i++) {
@@ -55,10 +55,7 @@ function Player() {
           className={styles["player-text"]}
           style={{ color: `var(--${paramLowerCase})` }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-          ducimus enim consequatur dolore fugiat illum excepturi illo pariatur
-          repellendus distinctio sed, neque, ab incidunt laborum expedita
-          deserunt totam necessitatibus modi.
+          {findPlayer?.playerInfo?.lore}
         </p>
         <button
           className={`${styles["skip-content-btn"]} ${"mob"}`}

@@ -3,12 +3,13 @@
     {
       "playerInfo": {
         "name": "Elin",
+        "lore": "Elin kan också betyda ljus eller strålande. För att vara på den säkra sidan bär hon därför solglasögon.",
         "icon": "/img/players/elin-icon-small.png",
         "iconLarge": "/img/players/elin-icon.png",
-        "win": 2,
-        "loss": 4,
-        "percent": 33,
-        "points": 2
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Marie Agerhäll & Fritte Fritzson",
@@ -29,12 +30,13 @@
     {
       "playerInfo": {
         "name": "Fabian",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/fabian-icon-small.png",
         "iconLarge": "/img/players/fabian-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Hanna Hellquist & Ina Lundström",
@@ -47,20 +49,21 @@
         "g32": "Johar Bendjelloul & Josefin Johansson",
         "g33": "Johar Bendjelloul & Josefin Johansson",
         "p1": "Christopher Garplind & Emma Peters",
-        "p2": "Johar Bendjelloul & Josefin Johansson",
-        "p3": "Cecilia Düringer & Jonatan Unge",
+        "p2": "Cecilia Düringer & Jonatan Unge",
+        "p3": "Johar Bendjelloul & Josefin Johansson",
         "p4": "Johar Bendjelloul & Josefin Johansson"
       }
     },
     {
       "playerInfo": {
         "name": "Fanni",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/fanni-icon-small.png",
         "iconLarge": "/img/players/fanni-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Hanna Hellquist & Ina Lundström",
@@ -73,20 +76,21 @@
         "g32": "Johar Bendjelloul & Josefin Johansson",
         "g33": "Johar Bendjelloul & Josefin Johansson",
         "p1": "Niklas Källner & Lena Nordlund",
-        "p2": "Johar Bendjelloul & Josefin Johansson",
-        "p3": "Cecilia Düringer & Jonatan Unge",
+        "p2": "Cecilia Düringer & Jonatan Unge",
+        "p3": "Johar Bendjelloul & Josefin Johansson",
         "p4": "Johar Bendjelloul & Josefin Johansson"
       }
     },
     {
       "playerInfo": {
         "name": "Gustav",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/gustav-icon-small.png",
         "iconLarge": "/img/players/gustav-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Marie Agerhäll & Fritte Fritzson",
@@ -107,12 +111,13 @@
     {
       "playerInfo": {
         "name": "Irma",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/irma-icon-small.png",
         "iconLarge": "/img/players/irma-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Hanna Hellquist & Ina Lundström",
@@ -133,12 +138,13 @@
     {
       "playerInfo": {
         "name": "Markus",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/markus-icon-small.png",
         "iconLarge": "/img/players/markus-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Hanna Hellquist & Ina Lundström",
@@ -159,12 +165,13 @@
     {
       "playerInfo": {
         "name": "Oskar",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/oskar-icon-small.png",
         "iconLarge": "/img/players/oskar-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Marie Agerhäll & Fritte Fritzson",
@@ -185,12 +192,13 @@
     {
       "playerInfo": {
         "name": "Selma",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/selma-icon-small.png",
         "iconLarge": "/img/players/selma-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Marie Agerhäll & Fritte Fritzson",
@@ -211,12 +219,13 @@
     {
       "playerInfo": {
         "name": "Valle",
+        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
         "icon": "/img/players/valle-icon-small.png",
         "iconLarge": "/img/players/valle-icon.png",
-        "win": 4,
-        "loss": 2,
-        "percent": 67,
-        "points": 4
+        "win": 0,
+        "loss": 0,
+        "percent": 0,
+        "points": 0
       },
       "bets": {
         "g11": "Hanna Hellquist & Ina Lundström",
@@ -229,8 +238,8 @@
         "g32": "Jason Diakité & Marcus Samuelsson",
         "g33": "Marit Bergman & Karin Bojs",
         "p1": "Christopher Garplind & Emma Peters",
-        "p2": "Marie Agerhäll & Fritte Fritzson",
-        "p3": "Cecilia Düringer & Jonatan Unge",
+        "p2": "Cecilia Düringer & Jonatan Unge",
+        "p3": "Marie Agerhäll & Fritte Fritzson",
         "p4": "Marie Agerhäll & Fritte Fritzson"
       }
     }

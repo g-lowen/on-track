@@ -1,9 +1,16 @@
 import styles from "./Home.module.css"
 import { useAppContext } from "../communication/Context"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Home() {
   const { results, bettingData } = useAppContext().context
+  const [loadPage, setLoadPage] = useState(false)
+
+  setTimeout(loadThePage, 500)
+  function loadThePage() {
+    setLoadPage(true)
+  }
 
   // count matches
   let sumMatches = 0
@@ -59,19 +66,22 @@ function Home() {
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
               {playerInfo.win}
+              {/* {win} */}
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
               {playerInfo.loss}
+              {/* {loss} */}
             </div>
             <div
               className={`${styles["row-item"]} ${
                 styles["row-item-5"]
               }  ${"desk"}`}
             >
-              {playerInfo.percent}%
+              {playerInfo.percent}%{/* {percent}% */}
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
               {playerInfo.points}
+              {/* {points} */}
             </div>
           </div>
         )
