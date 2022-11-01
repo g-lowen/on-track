@@ -12,19 +12,19 @@ function ContextProvider({ children }) {
   const [results, setResults] = useState([])
 
   const betKeys = [
-    "g11",
-    "g12",
-    "g13",
-    "g21",
-    "g22",
-    "g23",
-    "g31",
-    "g32",
-    "g33",
-    "p1",
-    "p2",
-    "p3",
-    "p4"
+    // "g11",
+    // "g12",
+    // "g13",
+    // "g21",
+    // "g22",
+    // "g23",
+    // "g31",
+    // "g32",
+    // "g33",
+    // "p1",
+    // "p2",
+    // "p3",
+    // "p4"
   ]
 
   let sumMatches = 0
@@ -70,9 +70,11 @@ function ContextProvider({ children }) {
   }
 
   useEffect(() => {
-    // Object.keys(bettingData?.players[0].bets).map((betKey) =>
-    //   betKeys.push(betKey)
-    // )
+    if (bettingData.players) {
+      Object.keys(bettingData?.players[0]?.bets).map((betKey) =>
+        betKeys.push(betKey)
+      )
+    }
 
     bettingData?.players?.forEach((player) => {
       const { playerInfo, bets } = player
@@ -96,6 +98,15 @@ function ContextProvider({ children }) {
         playerInfo.percent = Math.round((playerInfo.win / sumMatches) * 100)
       }
     })
+
+    // default sorting by points
+    bettingData?.players?.sort((a, b) =>
+      a.playerInfo.points < b.playerInfo.points
+        ? 1
+        : a.playerInfo.points > b.playerInfo.points
+        ? -1
+        : 0
+    )
   }, [bettingData])
 
   return (

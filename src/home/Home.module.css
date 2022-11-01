@@ -25,6 +25,16 @@
   background-color: var(--main1);
 }
 
+.btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  outline: inherit;
+}
+
 .row-item-1 {
   align-items: center;
   display: flex;

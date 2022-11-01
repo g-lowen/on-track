@@ -5,45 +5,90 @@ import { Link } from "react-router-dom"
 
 function Home() {
   const { results, bettingData } = useAppContext().context
-  const [loadPage, setLoadPage] = useState(false)
+  const [switchSort, setSwitchSort] = useState(false)
+  const [test, setTest] = useState(true)
 
-  setTimeout(loadThePage, 500)
-  function loadThePage() {
-    setLoadPage(true)
-  }
+  // setTimeout(loadThePage, 500)
+  // function loadThePage() {
+  // setSwitchSort(true)
+  //   console.log("Den körs")
+  // }
 
   // count matches
   let sumMatches = 0
   Object.keys(results).forEach(function (key) {
-    // Checks if the value is true. If so, +1 to sumMatches
     if (!results[key]) return
     sumMatches += 1
   })
 
-  // sort based on points
-  bettingData?.players?.sort((p1, p2) =>
-    p1.playerInfo.points < p2.playerInfo.points
-      ? 1
-      : p1.playerInfo.points > p2.playerInfo.points
-      ? -1
-      : 0
-  )
+  // sort table
+  function clickHandler(e) {
+    let sortKey = e.target.value
+    if (switchSort === true) {
+      bettingData?.players?.sort((a, b) =>
+        a.playerInfo[sortKey] < b.playerInfo[sortKey]
+          ? 1
+          : a.playerInfo[sortKey] > b.playerInfo[sortKey]
+          ? -1
+          : 0
+      )
+      setSwitchSort(false)
+    } else if (switchSort === false) {
+      bettingData?.players?.sort((a, b) =>
+        a.playerInfo[sortKey] < b.playerInfo[sortKey]
+          ? -1
+          : a.playerInfo[sortKey] > b.playerInfo[sortKey]
+          ? 1
+          : 0
+      )
+      setSwitchSort(true)
+    }
+  }
 
   return (
     <section className={`${styles["home"]}`}>
+      {test ? <button onClick={() => setTest(false)}>Click</button> : <></>}
       <div className={`${styles["heading-row"]}`}>
         <div className={`${styles["row-item"]} ${styles["row-item-1"]}`}>
-          Namn
+          <button className={styles["btn"]} onClick={clickHandler} value="name">
+            Namn
+          </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>M</div>
-        <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>W</div>
-        <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>L</div>
+        <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>
+          <button className={styles["btn"]} onClick={clickHandler} value="name">
+            M
+          </button>
+        </div>
+        <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
+          <button className={styles["btn"]} onClick={clickHandler} value="win">
+            W
+          </button>
+        </div>
+        <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
+          <button className={styles["btn"]} onClick={clickHandler} value="loss">
+            L
+          </button>
+        </div>
         <div
           className={`${styles["row-item"]} ${styles["row-item-5"]} ${"desk"}`}
         >
-          %
+          <button
+            className={styles["btn"]}
+            onClick={clickHandler}
+            value="percent"
+          >
+            %
+          </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>P</div>
+        <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
+          <button
+            className={styles["btn"]}
+            onClick={clickHandler}
+            value="points"
+          >
+            P
+          </button>
+        </div>
       </div>
       {bettingData?.players?.map((player, index) => {
         const { playerInfo } = player

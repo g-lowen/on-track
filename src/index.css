@@ -87,32 +87,24 @@ audio,
 video {
   border: 0;
   color: white;
-  /* font: inherit; */
-  /* font-size: 100%; */
+  font: inherit;
+  font-size: 100%;
+  font-family: "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  /* --main1: rgba(22, 24, 29); */
-  /* --main10: rgba(22, 24, 29, 0.7); */
   --main1: rgba(11, 11, 11);
   --main10: rgba(11, 11, 11, 0.7);
-  /* --main1: #16181d; */
-  /* --main2: rgba(32, 35, 42);
-  --main20: rgba(32, 35, 42, 0.7); */
   --main2: rgba(22, 22, 22);
   --main20: rgba(22, 22, 22, 0.7);
-  /* --main2: #20232a; */
   --main3: rgba(40, 44, 52);
   --main30: rgba(40, 44, 52, 0.7);
-  /* --main3: #282c34; */
   --main4: rgba(51, 55, 63);
   --main40: rgba(51, 55, 63, 0.7);
-  /* --main4: #33373f; */
   --main5: rgba(108, 108, 112);
   --main50: rgba(108, 108, 112, 0.7);
-  /* --main5: #6c6c70; */
 
   --elin: #797d62;
   --fabian: #f1dca7;
@@ -123,9 +115,6 @@ video {
   --oskar: #d9ae94;
   --selma: #ffcb69;
   --valle: #997b66;
-  /* --accent1: #4bd4ba;
-  --accent2: #ffec40;
-  --accent3: #ff4d00; */
 }
 
 .desk {
