@@ -49,22 +49,38 @@ function Home() {
     <section className={`${styles["home"]}`}>
       <div className={`${styles["heading-row"]}`}>
         <div className={`${styles["row-item"]} ${styles["row-item-1"]}`}>
-          <button className={styles["btn"]} onClick={clickHandler} value="name">
+          <button
+            className={`${styles["btn"]} ${styles["link"]}`}
+            onClick={clickHandler}
+            value="name"
+          >
             Namn
           </button>
         </div>
         <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>
-          <button className={styles["btn"]} onClick={clickHandler} value="name">
+          <button
+            className={`${styles["btn"]} ${styles["link"]}`}
+            onClick={clickHandler}
+            value="name"
+          >
             M
           </button>
         </div>
         <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
-          <button className={styles["btn"]} onClick={clickHandler} value="win">
+          <button
+            className={`${styles["btn"]} ${styles["link"]}`}
+            onClick={clickHandler}
+            value="win"
+          >
             W
           </button>
         </div>
         <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
-          <button className={styles["btn"]} onClick={clickHandler} value="loss">
+          <button
+            className={`${styles["btn"]} ${styles["link"]}`}
+            onClick={clickHandler}
+            value="loss"
+          >
             L
           </button>
         </div>
@@ -72,7 +88,7 @@ function Home() {
           className={`${styles["row-item"]} ${styles["row-item-5"]} ${"desk"}`}
         >
           <button
-            className={styles["btn"]}
+            className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
             value="percent"
           >
@@ -81,7 +97,7 @@ function Home() {
         </div>
         <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
           <button
-            className={styles["btn"]}
+            className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
             value="points"
           >
