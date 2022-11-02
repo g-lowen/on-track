@@ -1,17 +1,17 @@
 {
   "results": {
-    "grp1-m1": "1",
-    "grp1-m2": "1",
-    "grp1-m3": "0",
-    "grp2-m1": "1",
-    "grp2-m2": "1",
-    "grp2-m3": "0",
-    "grp3-m1": "1",
-    "grp3-m2": "1",
-    "grp3-m3": "0",
-    "2nd": "1",
-    "semi1": "1",
-    "semi2": "0",
-    "final": "1"
+    "g11": false,
+    "g12": false,
+    "g13": false,
+    "g21": false,
+    "g22": false,
+    "g23": false,
+    "g31": false,
+    "g32": false,
+    "g33": false,
+    "p1": false,
+    "p2": false,
+    "p3": false,
+    "p4": false
   }
 }
