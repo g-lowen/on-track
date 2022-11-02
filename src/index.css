@@ -87,8 +87,8 @@ audio,
 video {
   border: 0;
   color: white;
-  font: inherit;
-  font-size: 100%;
+  /* font: inherit; */
+  /* font-size: 100%; */
   font-family: "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;

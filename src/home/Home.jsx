@@ -6,13 +6,13 @@ import { Link } from "react-router-dom"
 function Home() {
   const { results, bettingData } = useAppContext().context
   const [switchSort, setSwitchSort] = useState(false)
-  const [test, setTest] = useState(true)
 
-  // setTimeout(loadThePage, 500)
-  // function loadThePage() {
-  // setSwitchSort(true)
-  //   console.log("Den körs")
-  // }
+  if (!bettingData.players) {
+    setTimeout(loadThePage, 500)
+    function loadThePage() {
+      setSwitchSort(true)
+    }
+  }
 
   // count matches
   let sumMatches = 0
@@ -47,7 +47,6 @@ function Home() {
 
   return (
     <section className={`${styles["home"]}`}>
-      {test ? <button onClick={() => setTest(false)}>Click</button> : <></>}
       <div className={`${styles["heading-row"]}`}>
         <div className={`${styles["row-item"]} ${styles["row-item-1"]}`}>
           <button className={styles["btn"]} onClick={clickHandler} value="name">

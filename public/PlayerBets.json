@@ -3,7 +3,7 @@
     {
       "playerInfo": {
         "name": "Elin",
-        "lore": "Elin kan också betyda ljus eller strålande. För att vara på den säkra sidan bär hon därför solglasögon.",
+        "lore": "Elin kommer från grekland och betyder ljus, strålande eller strålande ljus? Elin är inte oförsiktig av sig och bär hon därför solglasögon (se bild), något som förebygger behovet av solskyddsfaktor SPF 50. När hon bettar, bettar hon och då bettar hon rejält. Hur ska hon annars kunna kompensera för de pengar hon ger bort till \"behövande\" ungdomar?",
         "icon": "/img/players/elin-icon-small.png",
         "iconLarge": "/img/players/elin-icon.png",
         "win": 0,
@@ -30,7 +30,7 @@
     {
       "playerInfo": {
         "name": "Fabian",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Ursprungligen kommer Fabian från Latin och betyder böna. Utöver Latin har Fabian bott i Amerikas förenta stater, Irland, Torslanda och snart även Karlatornet. Fabian vet mycket väl vad som hände med Ikarus och har därför två saker han planerar att ta med sig till tornet: 1. sitt motto: \"bränt barn skyr solen\" och 2. sitt strandparasoll.",
         "icon": "/img/players/fabian-icon-small.png",
         "iconLarge": "/img/players/fabian-icon.png",
         "win": 0,
@@ -57,7 +57,7 @@
     {
       "playerInfo": {
         "name": "Fanni",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Fanny är en engelsk kortform från ett latinskt namn som betyder fransyska. Betydelsen för Fanni går  däremot ej att få tag på i historieböckerna. Hon har därför gjort det till sitt kall att gå till botten med vart och var namnets ursprung ligger. Med sig på färden bär hon ständigt sin ädla ryggsäck - Saccum Dorsualem.",
         "icon": "/img/players/fanni-icon-small.png",
         "iconLarge": "/img/players/fanni-icon.png",
         "win": 0,
@@ -84,7 +84,7 @@
     {
       "playerInfo": {
         "name": "Gustav",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Gustav är omdiskuterad, men anses av Götarna vara ett stöd. Detta är något han hörsammar och hjälper därför till med att valla flocken så att de tryggt kan följa sina bets online. Vad flocken inte vet däremot är att siffror är lätta att manipulera, och Gustav tycker om att vinna.",
         "icon": "/img/players/gustav-icon-small.png",
         "iconLarge": "/img/players/gustav-icon.png",
         "win": 0,
@@ -111,7 +111,7 @@
     {
       "playerInfo": {
         "name": "Irma",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Irma är tydligen tysk och en kortform av Ichlma, något som betyder att hon är skyddad av guden Irm. Irma försöker processa vad detta betyder (se tänkande bild). Vad hon däremot vet säkert är att hon hoppas att Irm ska ge henne styrka nog att vinna vadet och en gång för alla visa var skåpet ska, eller inte ska, stå.",
         "icon": "/img/players/irma-icon-small.png",
         "iconLarge": "/img/players/irma-icon.png",
         "win": 0,
@@ -138,7 +138,7 @@
     {
       "playerInfo": {
         "name": "Markus",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Markus kommer från bibeln, Latin, men är inte helt säker på sin betydelse. Han väljer dock att tro att det är en avdelning till namnet på krigsguden Mars, då Markus går att beskriva som hälta man, hälta gud. Med sin oövervinnerliga halva tror han sig dansa hem ännu en vinst.",
         "icon": "/img/players/markus-icon-small.png",
         "iconLarge": "/img/players/markus-icon.png",
         "win": 0,
@@ -165,7 +165,7 @@
     {
       "playerInfo": {
         "name": "Oskar",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Oskar är engelsk, ursprungligen irisk, och tror sig vara en sammanslagning av hjort och vän (tänk typ som en kentaur). Oskar hänger ofta ute i skogen och säger att han \"plockar svamp\". Verkligheten är dock att Oskar hoppas på att en dag få stöta på sin idol Bambi så han kan få visa hur snäll han är.",
         "icon": "/img/players/oskar-icon-small.png",
         "iconLarge": "/img/players/oskar-icon.png",
         "win": 0,
@@ -192,7 +192,7 @@
     {
       "playerInfo": {
         "name": "Selma",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Selma är keltisk och betyder vacker utsikt. \"Folk\" tänker allt som oftast att det är Selma som är den vackra utsikten. Hon rättar dem inte där, då de per se inte har fel, men för henne betyder det snarare att hon själv vill ha en vacker utsikt, och att livet går ut på att förse sig med vad ögat gillar.",
         "icon": "/img/players/selma-icon-small.png",
         "iconLarge": "/img/players/selma-icon.png",
         "win": 0,
@@ -219,7 +219,7 @@
     {
       "playerInfo": {
         "name": "Valle",
-        "lore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus enim consequatur dolore fugiat illum excepturi illo pariatur repellendus distinctio sed, neque, ab incidunt laborum expedita deserunt totam necessitatibus modi.",
+        "lore": "Valle är bara ett smeknamn. Valdemar däremot har andra rötter och betyder utmärkt härskare. Ett exempel på varför Valle är utmärkt på att härska är att han blundar. På så vis slipper han se ner på de han härskar över, då han inte gillar att se ner på folk. När det kommer till tävling dock är Valle inte nådig. Då kommer han se ner jättemycket på dig.",
         "icon": "/img/players/valle-icon-small.png",
         "iconLarge": "/img/players/valle-icon.png",
         "win": 0,

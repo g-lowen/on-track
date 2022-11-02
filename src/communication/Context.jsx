@@ -11,21 +11,7 @@ function ContextProvider({ children }) {
   const [bettingData, setBettingData] = useState([])
   const [results, setResults] = useState([])
 
-  const betKeys = [
-    // "g11",
-    // "g12",
-    // "g13",
-    // "g21",
-    // "g22",
-    // "g23",
-    // "g31",
-    // "g32",
-    // "g33",
-    // "p1",
-    // "p2",
-    // "p3",
-    // "p4"
-  ]
+  const betKeys = []
 
   let sumMatches = 0
   Object.keys(results).forEach(function (key) {
