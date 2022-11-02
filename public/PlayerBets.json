@@ -3,7 +3,7 @@
     {
       "playerInfo": {
         "name": "Elin",
-        "lore": "Elin kommer från grekland och betyder ljus, strålande eller strålande ljus? Elin är inte oförsiktig av sig och bär hon därför solglasögon (se bild), något som förebygger behovet av solskyddsfaktor SPF 50. När hon bettar, bettar hon och då bettar hon rejält. Hur ska hon annars kunna kompensera för de pengar hon ger bort till \"behövande\" ungdomar?",
+        "lore": "Elin kommer från grekland och betyder ljus, strålande eller strålande ljus? Elin är inte oförsiktig av sig och bär därför solglasögon (se bild), något som förebygger behovet av solskyddsfaktor SPF 50. När hon bettar, bettar hon och då bettar hon rejält. Hur ska hon annars kunna kompensera för de pengar hon ger bort till \"behövande\" ungdomar?",
         "icon": "/img/players/elin-icon-small.png",
         "iconLarge": "/img/players/elin-icon.png",
         "win": 0,
@@ -57,7 +57,7 @@
     {
       "playerInfo": {
         "name": "Fanni",
-        "lore": "Fanny är en engelsk kortform från ett latinskt namn som betyder fransyska. Betydelsen för Fanni går  däremot ej att få tag på i historieböckerna. Hon har därför gjort det till sitt kall att gå till botten med vart och var namnets ursprung ligger. Med sig på färden bär hon ständigt sin ädla ryggsäck - Saccum Dorsualem.",
+        "lore": "Fanny är en engelsk kortform från ett latinskt namn som betyder fransyska. Betydelsen för Fanni går däremot ej att få tag på i historieböckerna. Hon har därför gjort det till sitt kall att gå till botten med vart och var namnets ursprung ligger. Med sig på färden bär hon ständigt sin ädla ryggsäck - Saccum Dorsualem.",
         "icon": "/img/players/fanni-icon-small.png",
         "iconLarge": "/img/players/fanni-icon.png",
         "win": 0,
@@ -219,7 +219,7 @@
     {
       "playerInfo": {
         "name": "Valle",
-        "lore": "Valle är bara ett smeknamn. Valdemar däremot har andra rötter och betyder utmärkt härskare. Ett exempel på varför Valle är utmärkt på att härska är att han blundar. På så vis slipper han se ner på de han härskar över, då han inte gillar att se ner på folk. När det kommer till tävling dock är Valle inte nådig. Då kommer han se ner jättemycket på dig.",
+        "lore": "Valle är bara ett smeknamn. Voldemort däremot har andra rötter och betyder utmärkt härskare. Ett exempel på varför Valle är utmärkt på att härska är att han blundar. På så vis slipper han se ner på de han härskar över, då han inte gillar att se ner på folk. När det kommer till tävling dock är Valle inte nådig. Då kommer han se ner jättemycket på dig.",
         "icon": "/img/players/valle-icon-small.png",
         "iconLarge": "/img/players/valle-icon.png",
         "win": 0,
