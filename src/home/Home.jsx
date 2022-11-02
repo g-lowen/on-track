@@ -1,9 +1,18 @@
 import styles from "./Home.module.css"
 import { useAppContext } from "../communication/Context"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Home() {
-  const { results, players } = useAppContext().context
+  const { results, bettingData } = useAppContext().context
+  const [switchSort, setSwitchSort] = useState(false)
+
+  if (!bettingData.players) {
+    setTimeout(loadThePage, 500)
+    function loadThePage() {
+      setSwitchSort(true)
+    }
+  }
 
   // count matches
   let sumMatches = 0
@@ -12,32 +21,75 @@ function Home() {
     sumMatches += 1
   })
 
-  // sort based on points
-  players.sort((p1, p2) =>
-    p1.playerInfo.points < p2.playerInfo.points
-      ? 1
-      : p1.playerInfo.points > p2.playerInfo.points
-      ? -1
-      : 0
-  )
+  // sort table
+  function clickHandler(e) {
+    let sortKey = e.target.value
+    if (switchSort === true) {
+      bettingData?.players?.sort((a, b) =>
+        a.playerInfo[sortKey] < b.playerInfo[sortKey]
+          ? 1
+          : a.playerInfo[sortKey] > b.playerInfo[sortKey]
+          ? -1
+          : 0
+      )
+      setSwitchSort(false)
+    } else if (switchSort === false) {
+      bettingData?.players?.sort((a, b) =>
+        a.playerInfo[sortKey] < b.playerInfo[sortKey]
+          ? -1
+          : a.playerInfo[sortKey] > b.playerInfo[sortKey]
+          ? 1
+          : 0
+      )
+      setSwitchSort(true)
+    }
+  }
 
   return (
     <section className={`${styles["home"]}`}>
       <div className={`${styles["heading-row"]}`}>
         <div className={`${styles["row-item"]} ${styles["row-item-1"]}`}>
-          Namn
+          <button className={styles["btn"]} onClick={clickHandler} value="name">
+            Namn
+          </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>M</div>
-        <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>W</div>
-        <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>L</div>
+        <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>
+          <button className={styles["btn"]} onClick={clickHandler} value="name">
+            M
+          </button>
+        </div>
+        <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
+          <button className={styles["btn"]} onClick={clickHandler} value="win">
+            W
+          </button>
+        </div>
+        <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
+          <button className={styles["btn"]} onClick={clickHandler} value="loss">
+            L
+          </button>
+        </div>
         <div
           className={`${styles["row-item"]} ${styles["row-item-5"]} ${"desk"}`}
         >
-          %
+          <button
+            className={styles["btn"]}
+            onClick={clickHandler}
+            value="percent"
+          >
+            %
+          </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>P</div>
+        <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
+          <button
+            className={styles["btn"]}
+            onClick={clickHandler}
+            value="points"
+          >
+            P
+          </button>
+        </div>
       </div>
-      {players.map((player, index) => {
+      {bettingData?.players?.map((player, index) => {
         const { playerInfo } = player
 
         return (
@@ -58,19 +110,22 @@ function Home() {
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
               {playerInfo.win}
+              {/* {win} */}
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
               {playerInfo.loss}
+              {/* {loss} */}
             </div>
             <div
               className={`${styles["row-item"]} ${
                 styles["row-item-5"]
               }  ${"desk"}`}
             >
-              {playerInfo.percent}%
+              {playerInfo.percent}%{/* {percent}% */}
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
               {playerInfo.points}
+              {/* {points} */}
             </div>
           </div>
         )

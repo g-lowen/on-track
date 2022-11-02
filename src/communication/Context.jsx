@@ -8,28 +8,39 @@ function useAppContext() {
 }
 
 function ContextProvider({ children }) {
-  const [players, setPlayers] = useState([])
+  const [bettingData, setBettingData] = useState([])
   const [results, setResults] = useState([])
 
+  const betKeys = []
+
+  let sumMatches = 0
+  Object.keys(results).forEach(function (key) {
+    // Checks if the value is true. If so, +1 to sumMatches
+    if (!results[key]) return
+    sumMatches += 1
+  })
+
   const context = {
-    players: playersContext(),
+    bettingData: bettingContext(),
     results: resultsContext()
   }
 
   // ------------------------------------------------------
-  // PlayerBets Context
+  // Betting Context
   // ------------------------------------------------------
-  function playersContext() {
+
+  function bettingContext() {
     useEffect(() => {
       const fetchData = async () => {
         await axios.get("/PlayerBets.json").then((result) => {
-          setPlayers(result.data.players)
+          setBettingData(result.data)
         })
       }
 
       fetchData()
     }, [])
-    return players
+
+    return bettingData
   }
 
   // ------------------------------------------------------
@@ -43,6 +54,46 @@ function ContextProvider({ children }) {
     }, [])
     return results
   }
+
+  useEffect(() => {
+    if (bettingData.players) {
+      Object.keys(bettingData?.players[0]?.bets).map((betKey) =>
+        betKeys.push(betKey)
+      )
+    }
+
+    bettingData?.players?.forEach((player) => {
+      const { playerInfo, bets } = player
+      for (let i = 0; i < betKeys.length; i++) {
+        if (bets[betKeys[i]] === results[betKeys[i]]) {
+          playerInfo.win += 1
+          if (betKeys[i].startsWith("g")) {
+            playerInfo.points += 1
+          } else if (betKeys[i].startsWith("p4")) {
+            playerInfo.points += 5
+          } else if (betKeys[i].startsWith("p")) {
+            playerInfo.points += 3
+          }
+        } else if (
+          bets[betKeys[i]] !== results[betKeys[i]] &&
+          results[betKeys[i]] !== false
+        ) {
+          playerInfo.loss += 1
+        }
+        if (!sumMatches) return
+        playerInfo.percent = Math.round((playerInfo.win / sumMatches) * 100)
+      }
+    })
+
+    // default sorting by points
+    bettingData?.players?.sort((a, b) =>
+      a.playerInfo.points < b.playerInfo.points
+        ? 1
+        : a.playerInfo.points > b.playerInfo.points
+        ? -1
+        : 0
+    )
+  }, [bettingData])
 
   return (
     <AppContext.Provider value={{ context }}>{children}</AppContext.Provider>

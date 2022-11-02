@@ -1,11 +1,11 @@
 {
   "results": {
-    "g11": "1",
-    "g12": "1",
-    "g13": "1",
-    "g21": "1",
-    "g22": "1",
-    "g23": "1",
+    "g11": "Marie Agerhäll & Fritte Fritzson",
+    "g12": "Marie Agerhäll & Fritte Fritzson",
+    "g13": false,
+    "g21": false,
+    "g22": false,
+    "g23": false,
     "g31": false,
     "g32": false,
     "g33": false,
