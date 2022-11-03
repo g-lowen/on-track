@@ -138,7 +138,7 @@
     {
       "playerInfo": {
         "name": "Markus",
-        "lore": "Markus kommer från bibeln, Latin, men är inte helt säker på sin betydelse. Han väljer dock att tro att det är en avdelning till namnet på krigsguden Mars, då Markus går att beskriva som hälta man, hälta gud. Med sin oövervinnerliga halva tror han sig dansa hem ännu en vinst.",
+        "lore": "Markus kommer från bibeln och har ursprung från Latin, men är inte helt säker på sin betydelse. Han väljer dock att tro att det är en avledning till namnet på krigsguden Mars, då Markus går att beskriva som hälta man, hälta gud. Med sin oövervinnerliga halva tror han sig dansa hem ännu en vinst.",
         "icon": "/img/players/markus-icon-small.png",
         "iconLarge": "/img/players/markus-icon.png",
         "win": 0,
