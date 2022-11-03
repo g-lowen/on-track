@@ -15,7 +15,7 @@
 .result-section {
   background-attachment: fixed;
   background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
-    url("/img/train-track-sm.png");
+    url("/img/train-track-s.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,7 +151,7 @@
 
   .result-section {
     background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
-      url("/img/train-track-m.png");
+      url("/img/train-track-m.jpg");
     background-position: center right;
     background-size: 70%;
     margin-left: 30%;
@@ -179,7 +179,7 @@
 @media (min-width: 1440px) {
   .result-section {
     background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
-      url("/img/train-track-l.png");
+      url("/img/train-track-l.jpg");
   }
 
   .heading-row,
@@ -211,6 +211,6 @@
 @media (min-width: 1920px) {
   .result-section {
     background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
-      url("/img/train-track-xl.png");
+      url("/img/train-track-xl.jpg");
   }
 }
