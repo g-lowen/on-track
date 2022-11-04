@@ -48,7 +48,10 @@ function Home() {
   return (
     <section className={`${styles["home"]}`}>
       <div className={`${styles["heading-row"]}`}>
-        <div className={`${styles["row-item"]} ${styles["row-item-1"]}`}>
+        <div
+          className={`${styles["row-item"]} ${styles["row-item-1"]}`}
+          style={{ marginLeft: "10px" }}
+        >
           <button
             className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
@@ -110,7 +113,10 @@ function Home() {
 
         return (
           <div className={`${styles["row"]}`} key={index}>
-            <div className={`${styles["row-item"]} ${styles["row-item-1"]}`}>
+            <div
+              className={`${styles["row-item"]} ${styles["row-item-1"]}`}
+              style={{ marginLeft: "10px" }}
+            >
               <Link className={styles["row-item-1"]} to={playerInfo.name}>
                 {`${index + 1 + ". "}`}
                 <img
@@ -126,22 +132,19 @@ function Home() {
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
               {playerInfo.win}
-              {/* {win} */}
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
               {playerInfo.loss}
-              {/* {loss} */}
             </div>
             <div
               className={`${styles["row-item"]} ${
                 styles["row-item-5"]
               }  ${"desk"}`}
             >
-              {playerInfo.percent}%{/* {percent}% */}
+              {playerInfo.percent}%
             </div>
             <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
               {playerInfo.points}
-              {/* {points} */}
             </div>
           </div>
         )

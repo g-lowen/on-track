@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 10%;
+  /* padding: 10%; */
 
   background-attachment: fixed;
   background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
@@ -33,6 +33,7 @@
   font-size: 16px;
   font-family: "Times New Roman", Times, serif;
   outline: inherit;
+  padding: 0;
 }
 
 .row-item-1 {
@@ -58,9 +59,12 @@
 }
 
 .player-icon {
+  align-items: center;
+  display: flex;
   height: 31px;
   margin: auto 5px auto 5px;
   width: 31px;
+  text-align: center;
 }
 
 @media (min-width: 769px) {
