@@ -65,6 +65,7 @@ function ContextProvider({ children }) {
     bettingData?.players?.forEach((player) => {
       const { playerInfo, bets } = player
       for (let i = 0; i < betKeys.length; i++) {
+        if (results[betKeys[i]] === false) return
         if (bets[betKeys[i]] === results[betKeys[i]]) {
           playerInfo.win += 1
           if (betKeys[i].startsWith("g")) {
