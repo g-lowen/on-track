@@ -77,9 +77,10 @@ function ContextProvider({ children }) {
           }
         } else if (
           bets[betKeys[i]] !== results[betKeys[i]] &&
-          results[betKeys[i]] !== false
+          results[betKeys[i]] !== false &&
+          results[betKeys[i]] !== undefined
         ) {
-          playerInfo.loss += 2
+          playerInfo.loss += 1
         }
         if (!sumMatches) return
         playerInfo.percent = Math.round((playerInfo.win / sumMatches) * 100)
