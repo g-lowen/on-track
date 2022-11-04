@@ -65,7 +65,7 @@ function ContextProvider({ children }) {
     bettingData?.players?.forEach((player) => {
       const { playerInfo, bets } = player
       for (let i = 0; i < betKeys.length; i++) {
-        if (results[betKeys[i]] === false) return
+        // if (results[betKeys[i]] === false) return
         if (bets[betKeys[i]] === results[betKeys[i]]) {
           playerInfo.win += 1
           if (betKeys[i].startsWith("g")) {
@@ -79,7 +79,7 @@ function ContextProvider({ children }) {
           bets[betKeys[i]] !== results[betKeys[i]] &&
           results[betKeys[i]] !== false
         ) {
-          playerInfo.loss += 1
+          playerInfo.loss += 2
         }
         if (!sumMatches) return
         playerInfo.percent = Math.round((playerInfo.win / sumMatches) * 100)
