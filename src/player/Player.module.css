@@ -6,20 +6,10 @@
 .player-section {
   background-color: var(--main1);
   color: var(--elin);
-  padding-top: 10%;
+  /* padding-top: 10%; */
   min-height: 100vh;
   position: relative;
   width: 100%;
-}
-
-.result-section {
-  background-attachment: fixed;
-  background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
-    url("/img/train-track-s.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
 }
 
 .player-heading {
@@ -30,11 +20,20 @@
 
 .player-icon {
   max-width: 50%;
+  padding-top: 50px;
 }
 
 .player-text {
   margin-left: calc(24px + 5%);
   margin-right: calc(24px + 5%);
+}
+
+.btn-container {
+  background-color: var(--main1);
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .go-back-btn,
@@ -49,17 +48,11 @@
   align-items: center;
   font-size: 48px;
   font-weight: 600;
-  height: 48px;
+  height: 36px;
   display: flex;
   justify-content: center;
   padding: 0;
   width: 48px;
-
-  /* positioning */
-  left: 0%;
-  margin: 10px;
-  position: absolute;
-  top: 0%;
 }
 
 .skip-content-btn {
@@ -77,6 +70,20 @@
   padding: 6px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.result-section {
+  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+    url("/img/train-track-s.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.result-section h2 {
+  padding: 24px 0 0 0;
 }
 
 .heading-row,
@@ -109,6 +116,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.first {
+  padding-left: 12px;
+}
+
+.last {
+  padding-right: 12px;
 }
 
 .picked {
@@ -150,9 +165,30 @@
   }
 
   .player-section {
-    padding-top: 5%;
     position: fixed;
     width: 30%;
+  }
+
+  .btn-container {
+    height: 0;
+    position: relative;
+  }
+
+  .go-back-btn {
+    align-items: center;
+    font-size: 48px;
+    font-weight: 600;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 48px;
+
+    /* positioning */
+    left: 0%;
+    margin: 10px;
+    position: absolute;
+    top: 0%;
   }
 
   .result-section {
@@ -176,13 +212,9 @@
       calc(32px) calc(122px + 32px) calc(80px + 32px)
       1fr;
   }
-
-  /* .row-item {
-    padding: 24px;
-  } */
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1366px) {
   .result-section {
     background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
       url("/img/train-track-l.jpg");

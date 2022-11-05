@@ -38,13 +38,15 @@ function Player() {
       ) : (
         <section className={`${styles["player"]}`}>
           <section className={`${styles["player-section"]}`}>
-            <button
-              className={`${styles["go-back-btn"]}`}
-              onClick={() => navigate(-1)}
-              style={{ color: `var(--${paramLowerCase})` }}
-            >
-              x
-            </button>
+            <div className={styles["btn-container"]}>
+              <button
+                className={`${styles["go-back-btn"]}`}
+                onClick={() => navigate(-1)}
+                style={{ color: `var(--${paramLowerCase})` }}
+              >
+                x
+              </button>
+            </div>
             <img
               className={`${styles["player-icon"]}`}
               src={playerImage}
@@ -67,6 +69,7 @@ function Player() {
               onClick={() =>
                 contentRef.current.scrollIntoView({ behavior: "smooth" })
               }
+              ref={contentRef}
             >
               <div
                 className={styles["arrow"]}
@@ -76,9 +79,14 @@ function Player() {
               ></div>
             </button>
           </section>
-          <section className={`${styles["result-section"]}`} ref={contentRef}>
+          <section className={`${styles["result-section"]}`}>
+            <h2>Track {param}'s bets</h2>
             <div className={`${styles["heading-row"]}`}>
-              <div className={`${styles["row-item"]} ${"mob"}`}>#</div>
+              <div
+                className={`${styles["row-item"]} ${"mob"} ${styles["first"]}`}
+              >
+                #
+              </div>
               <div
                 className={`${styles["row-item"]} ${styles["first"]} ${"desk"}`}
               >
@@ -87,7 +95,9 @@ function Player() {
               <div className={`${styles["row-item"]} ${"desk"}`}>Datum</div>
               <div className={`${styles["row-item"]} ${"desk"}`}>Matchtyp</div>
               <div className={`${styles["row-item"]} `}>1:a klass</div>
-              <div className={`${styles["row-item"]} `}>Dressinen</div>
+              <div className={`${styles["row-item"]}  ${styles["last"]}`}>
+                Dressinen
+              </div>
             </div>
             {/* Mapping matches from the groups */}
             {bettingData?.betsTableGroup?.map((match, index) => {
