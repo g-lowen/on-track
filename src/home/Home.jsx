@@ -47,9 +47,10 @@ function Home() {
 
   return (
     <section className={`${styles["home"]}`}>
+      <h1>Keeping your bets On Track</h1>
       <div className={`${styles["heading-row"]}`}>
         <div
-          className={`${styles["row-item"]} ${styles["row-item-1"]}`}
+          className={`${styles["row-item-1"]}`}
           style={{ marginLeft: "10px" }}
         >
           <button
@@ -57,54 +58,52 @@ function Home() {
             onClick={clickHandler}
             value="name"
           >
-            Namn
+            {switchSort ? <>▲</> : <>▼</>} nmaN
           </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>
+        <div className={`${styles["row-item"]}`}>
           <button
             className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
             value="name"
           >
-            M
+            {switchSort ? <>▲</> : <>▼</>} M
           </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
+        <div className={`${styles["row-item"]}`}>
           <button
             className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
             value="win"
           >
-            W
+            {switchSort ? <>▲</> : <>▼</>} W
           </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
+        <div className={`${styles["row-item"]}`}>
           <button
             className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
             value="loss"
           >
-            L
+            {switchSort ? <>▲</> : <>▼</>} L
           </button>
         </div>
-        <div
-          className={`${styles["row-item"]} ${styles["row-item-5"]} ${"desk"}`}
-        >
+        <div className={`${styles["row-item"]} ${"desk"}`}>
           <button
             className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
             value="percent"
           >
-            %
+            {switchSort ? <>▲</> : <>▼</>} %
           </button>
         </div>
-        <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
+        <div className={`${styles["row-item"]}`}>
           <button
             className={`${styles["btn"]} ${styles["link"]}`}
             onClick={clickHandler}
             value="points"
           >
-            P
+            {switchSort ? <>▲</> : <>▼</>} P
           </button>
         </div>
       </div>
@@ -114,7 +113,7 @@ function Home() {
         return (
           <div className={`${styles["row"]}`} key={index}>
             <div
-              className={`${styles["row-item"]} ${styles["row-item-1"]}`}
+              className={`${styles["row-item-1"]}`}
               style={{ marginLeft: "10px" }}
             >
               <Link className={styles["row-item-1"]} to={playerInfo.name}>
@@ -127,25 +126,13 @@ function Home() {
                 <span className={styles["link"]}>{playerInfo.name}</span>
               </Link>
             </div>
-            <div className={`${styles["row-item"]} ${styles["row-item-2"]}`}>
-              {sumMatches}
-            </div>
-            <div className={`${styles["row-item"]} ${styles["row-item-3"]}`}>
-              {playerInfo.win}
-            </div>
-            <div className={`${styles["row-item"]} ${styles["row-item-4"]}`}>
-              {playerInfo.loss}
-            </div>
-            <div
-              className={`${styles["row-item"]} ${
-                styles["row-item-5"]
-              }  ${"desk"}`}
-            >
+            <div className={`${styles["row-item"]}`}>{sumMatches}</div>
+            <div className={`${styles["row-item"]}`}>{playerInfo.win}</div>
+            <div className={`${styles["row-item"]}`}>{playerInfo.loss}</div>
+            <div className={`${styles["row-item"]}  ${"desk"}`}>
               {playerInfo.percent}%
             </div>
-            <div className={`${styles["row-item"]} ${styles["row-item-6"]}`}>
-              {playerInfo.points}
-            </div>
+            <div className={`${styles["row-item"]}`}>{playerInfo.points}</div>
           </div>
         )
       })}
