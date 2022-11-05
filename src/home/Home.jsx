@@ -47,7 +47,7 @@ function Home() {
 
   return (
     <section className={`${styles["home"]}`}>
-      <h1>Keeping your bets On Track</h1>
+      <h1>Keeping bets On Track</h1>
       <div className={`${styles["heading-row"]}`}>
         <div
           className={`${styles["row-item-1"]}`}
