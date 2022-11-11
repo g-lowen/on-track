@@ -6,11 +6,12 @@ import { Link } from "react-router-dom"
 function Home() {
   const { results, bettingData } = useAppContext().context
   const [switchSort, setSwitchSort] = useState(false)
+  const [reload, setReload] = useState(false)
 
   if (!bettingData.players) {
     setTimeout(loadThePage, 500)
     function loadThePage() {
-      setSwitchSort(true)
+      setReload(true)
     }
   }
 
