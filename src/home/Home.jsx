@@ -9,7 +9,7 @@ function Home() {
   const [reload, setReload] = useState(false)
 
   if (!bettingData.players) {
-    setTimeout(loadThePage, 500)
+    setTimeout(loadThePage, 1000)
     function loadThePage() {
       setReload(true)
     }
