@@ -6,11 +6,12 @@ import { Link } from "react-router-dom"
 function Home() {
   const { results, bettingData } = useAppContext().context
   const [switchSort, setSwitchSort] = useState(false)
+  const [reload, setReload] = useState(false)
 
   if (!bettingData.players) {
     setTimeout(loadThePage, 500)
     function loadThePage() {
-      setSwitchSort(true)
+      setReload(true)
     }
   }
 
@@ -112,11 +113,11 @@ function Home() {
 
         return (
           <div className={`${styles["row"]}`} key={index}>
-            <div
-              className={`${styles["row-item-1"]}`}
-              style={{ marginLeft: "10px" }}
-            >
-              <Link className={styles["row-item-1"]} to={playerInfo.name}>
+            <Link className={styles["row-item-1"]} to={playerInfo.name}>
+              <div
+                className={`${styles["row-item-1"]}`}
+                style={{ marginLeft: "10px" }}
+              >
                 {`${index + 1 + ". "}`}
                 <img
                   className={`${styles["player-icon"]}`}
@@ -124,8 +125,8 @@ function Home() {
                   alt="Icon"
                 />
                 <span className={styles["link"]}>{playerInfo.name}</span>
-              </Link>
-            </div>
+              </div>
+            </Link>
             <div className={`${styles["row-item"]}`}>{sumMatches}</div>
             <div className={`${styles["row-item"]}`}>{playerInfo.win}</div>
             <div className={`${styles["row-item"]}`}>{playerInfo.loss}</div>
