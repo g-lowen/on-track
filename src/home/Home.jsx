@@ -16,7 +16,7 @@ function Home() {
   }
 
   function updatePage() {
-    setReload(true)
+    setReload(false)
   }
 
   // count matches
