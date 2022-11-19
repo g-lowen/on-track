@@ -15,6 +15,10 @@ function Home() {
     }
   }
 
+  function updatePage() {
+    setReload(true)
+  }
+
   // count matches
   let sumMatches = 0
   Object.keys(results).forEach(function (key) {
@@ -49,6 +53,14 @@ function Home() {
   return (
     <section className={`${styles["home"]}`}>
       <h1>Keeping bets On Track</h1>
+      {reload && (
+        <button
+          className={`${styles["update-btn"]} ${styles["link"]}`}
+          onClick={updatePage}
+        >
+          Update points ⟳
+        </button>
+      )}
       <div className={`${styles["heading-row"]}`}>
         <div
           className={`${styles["row-item-1"]}`}

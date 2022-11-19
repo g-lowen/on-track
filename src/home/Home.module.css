@@ -30,6 +30,17 @@
   background-color: var(--main1);
 }
 
+.update-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  outline: inherit;
+  padding: 0px;
+}
+
 .btn {
   background: none;
   border: none;
