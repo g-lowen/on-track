@@ -8,8 +8,8 @@ function useAppContext() {
 }
 
 function ContextProvider({ children }) {
-  const [bettingData, setBettingData] = useState([])
   const [results, setResults] = useState([])
+  const [bettingData, setBettingData] = useState([])
 
   const betKeys = []
 
@@ -21,26 +21,8 @@ function ContextProvider({ children }) {
   })
 
   const context = {
-    bettingData: bettingContext(),
-    results: resultsContext()
-  }
-
-  // ------------------------------------------------------
-  // Betting Context
-  // ------------------------------------------------------
-
-  function bettingContext() {
-    useEffect(() => {
-      const fetchData = async () => {
-        await axios.get("/PlayerBets.json").then((result) => {
-          setBettingData(result.data)
-        })
-      }
-
-      fetchData()
-    }, [])
-
-    return bettingData
+    results: resultsContext(),
+    bettingData: bettingContext()
   }
 
   // ------------------------------------------------------
@@ -55,7 +37,17 @@ function ContextProvider({ children }) {
     return results
   }
 
-  useEffect(() => {
+  // ------------------------------------------------------
+  // Betting Context
+  // ------------------------------------------------------
+
+  function bettingContext() {
+    useEffect(() => {
+      axios.get("/PlayerBets.json").then((result) => {
+        setBettingData(result.data)
+      })
+    }, [])
+
     if (bettingData.players) {
       Object.keys(bettingData?.players[0]?.bets).map((betKey) =>
         betKeys.push(betKey)
@@ -94,7 +86,9 @@ function ContextProvider({ children }) {
         ? -1
         : 0
     )
-  }, [bettingData])
+
+    return bettingData
+  }
 
   return (
     <AppContext.Provider value={{ context }}>{children}</AppContext.Provider>
