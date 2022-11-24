@@ -24,8 +24,6 @@
 }
 
 .player-text {
-  /* margin-left: calc(24px + 5%);
-  margin-right: calc(24px + 5%); */
   margin-inline: auto;
   max-width: 60ch;
   padding: 0 24px 0 24px;
@@ -61,7 +59,7 @@
 .skip-content-btn {
   /* positioning */
   position: absolute;
-  bottom: 0%;
+  bottom: 1.5%;
   width: 100%;
 }
 
