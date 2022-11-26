@@ -6,18 +6,6 @@ import { Link } from "react-router-dom"
 function Home() {
   const { results, bettingData } = useAppContext().context
   const [switchSort, setSwitchSort] = useState(false)
-  const [reload, setReload] = useState(false)
-
-  if (!bettingData.players) {
-    setTimeout(loadThePage, 1000)
-    function loadThePage() {
-      setReload(true)
-    }
-  }
-
-  function updatePage() {
-    setReload(false)
-  }
 
   // count matches
   let sumMatches = 0
@@ -53,14 +41,6 @@ function Home() {
   return (
     <section className={`${styles["home"]}`}>
       <h1>Keeping bets On Track</h1>
-      {reload && (
-        <button
-          className={`${styles["update-btn"]} ${styles["link"]}`}
-          onClick={updatePage}
-        >
-          Update points ⟳
-        </button>
-      )}
       <div className={`${styles["heading-row"]}`}>
         <div
           className={`${styles["row-item-1"]}`}
