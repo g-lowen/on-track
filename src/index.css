@@ -1,0 +1,135 @@
+/* ----------------------------------------------------------------------------
+Reset Browser Styling
+----------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  color: white;
+  /* font: inherit; */
+  /* font-size: 100%; */
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main1: rgba(11, 11, 11);
+  --main10: rgba(11, 11, 11, 0.85);
+  --main2: rgba(22, 22, 22);
+  --main20: rgba(22, 22, 22, 0.7);
+  --main3: rgba(40, 44, 52);
+  --main30: rgba(40, 44, 52, 0.7);
+  --main4: rgba(51, 55, 63);
+  --main40: rgba(51, 55, 63, 0.7);
+  --main5: rgba(108, 108, 112);
+  --main50: rgba(108, 108, 112, 0.7);
+
+  --elin: #797d62;
+  --fabian: #f1dca7;
+  --fanni: #9b9b7a;
+  --gustav: #baa587;
+  --irma: #b58463;
+  --markus: #e8ac65;
+  --oskar: #d9ae94;
+  --selma: #ffcb69;
+  --valle: #997b66;
+}
+
+.desk {
+  display: none;
+}
+.mob {
+  display: inherit;
+}
+
+@media (min-width: 769px) {
+  .desk {
+    display: inherit;
+  }
+
+  .mob {
+    display: none;
+  }
+}

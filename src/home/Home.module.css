@@ -1,0 +1,130 @@
+.home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+    url("/img/train-track-s.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.home h1 {
+  margin: 24px;
+  text-align: center;
+}
+
+.heading-row,
+.row {
+  border-bottom: 0.2px solid var(--main5);
+  display: grid;
+  grid-template-columns: auto 36px 36px 36px 36px;
+  max-width: 500px;
+  width: 100%;
+}
+.row:hover {
+  background-color: var(--main1);
+}
+
+.update-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  outline: inherit;
+  padding: 0px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  outline: inherit;
+  padding: 0px;
+
+  /* mirroring the letters in .btn in order to use ::first-letter*/
+  float: left;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.btn::first-letter {
+  font-size: 0.5rem;
+}
+
+.row-item .btn {
+  width: 3rem;
+}
+
+.row-item-1 {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.row-item {
+  align-self: center;
+  display: flex;
+  justify-self: center;
+  margin: 1rem;
+}
+
+.player-icon {
+  align-items: center;
+  display: flex;
+  height: 36px;
+  margin: auto 0.5rem auto 0.5rem;
+  width: 36px;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .home {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-m.jpg");
+    padding-top: 5%;
+  }
+
+  .heading-row,
+  .row {
+    grid-template-columns: auto 36px 36px 36px 36px 36px;
+  }
+
+  .row-item {
+    margin: 16px;
+  }
+
+  .player-icon {
+    height: 46px;
+    margin: auto 10px auto 10px;
+    width: 46px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-l.jpg");
+  }
+}
+
+@media (min-width: 1920px) {
+  .home {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-xl.jpg");
+  }
+}

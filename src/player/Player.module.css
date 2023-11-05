@@ -1,0 +1,256 @@
+.player {
+  position: relative;
+  text-align: center;
+}
+
+.player-section {
+  background-color: var(--main1);
+  color: var(--elin);
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.player-heading {
+  font-size: 30px;
+  margin: -5px auto 5px auto;
+  width: 100%;
+}
+
+.player-icon {
+  max-width: 50%;
+  padding-top: 50px;
+}
+
+.player-text {
+  margin-inline: auto;
+  max-width: 60ch;
+  padding: 0 24px 0 24px;
+}
+
+.btn-container {
+  background-color: var(--main10);
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.go-back-btn,
+.skip-content-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.go-back-btn {
+  align-items: center;
+  font-size: 48px;
+  font-weight: 600;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 48px;
+}
+
+.skip-content-btn {
+  /* positioning */
+  position: absolute;
+  bottom: 1.5%;
+  width: 100%;
+}
+
+.arrow {
+  border-style: solid;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.result-section {
+  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+    url("/img/train-track-s.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.result-section h2 {
+  padding: 24px 0 0 0;
+}
+
+.heading-row,
+.row {
+  border-bottom: 0.2px solid var(--main5);
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  width: 100%;
+}
+.row:hover,
+.row-playoffs:hover {
+  background-color: var(--main1);
+}
+
+.row-playoffs {
+  border-bottom: 0.2px solid var(--main5);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 100%;
+}
+
+.row-item {
+  align-self: center;
+  justify-self: center;
+  height: 100%;
+  padding: 24px 5px 24px 5px;
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first {
+  padding-left: 12px;
+}
+
+.last {
+  padding-right: 12px;
+}
+
+.picked {
+  background-color: white;
+  border-radius: 100vw;
+  bottom: 7%;
+  display: inline-block;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+}
+
+.check {
+  border-bottom: 4px solid #78b12f;
+  border-right: 4px solid #78b12f;
+  bottom: 7%;
+  display: inline-block;
+  height: 16px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+#cross {
+  bottom: 0%;
+  color: #b34327;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Sans-serif;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .player {
+    display: flex;
+    text-align: center;
+  }
+
+  .player-section {
+    position: fixed;
+    width: 30%;
+  }
+
+  .btn-container {
+    height: 0;
+    position: relative;
+  }
+
+  .go-back-btn {
+    align-items: center;
+    font-size: 48px;
+    font-weight: 600;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 48px;
+
+    /* positioning */
+    left: 0%;
+    margin: 10px;
+    position: absolute;
+    top: 0%;
+  }
+
+  .result-section {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-m.jpg");
+    background-position: center right;
+    background-size: 70%;
+    margin-left: 30%;
+    width: 70%;
+  }
+
+  .heading-row,
+  .row {
+    grid-template-columns:
+      calc(32px) calc(122px + 32px) calc(80px + 32px)
+      1fr 1fr;
+  }
+
+  .row-playoffs {
+    grid-template-columns:
+      calc(32px) calc(122px + 32px) calc(80px + 32px)
+      1fr;
+  }
+}
+
+@media (min-width: 1366px) {
+  .result-section {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-l.jpg");
+  }
+
+  .heading-row,
+  .row {
+    grid-template-columns:
+      calc(32px + 32px) calc(144px + 32px) calc(120px + 32px)
+      1fr 1fr;
+  }
+
+  .row-playoffs {
+    grid-template-columns:
+      calc(32px + 32px) calc(144px + 32px) calc(120px + 32px)
+      1fr;
+  }
+
+  .row-item {
+    padding: 24px;
+  }
+
+  .first {
+    padding-left: 36px;
+  }
+
+  .last {
+    padding-right: 36px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .result-section {
+    background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+      url("/img/train-track-xl.jpg");
+  }
+}

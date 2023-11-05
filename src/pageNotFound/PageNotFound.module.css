@@ -1,0 +1,12 @@
+.page-not-found {
+  padding: 10%;
+  text-align: center;
+
+  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, var(--main20), var(--main10)),
+    url("/img/train-track-s.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
