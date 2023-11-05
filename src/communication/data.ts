@@ -254,7 +254,7 @@ export const playerBets = {
         "0"
       ],
       g12: [
-        "Hector Apelgren & Peter Apelgren",
+        "Christopher Garplind & Emma Peters",
         "Jennifer Kücükaslan & Johan Kücükaslan",
         "10 november 2023",
         "Gruppspel",
@@ -322,7 +322,7 @@ export const playerBets = {
 } as const;
 
 export const results = {
-  g11: false,
+  g11: "Hector Apelgren & Peter Apelgren",
   g12: false,
   g13: false,
   g21: false,
