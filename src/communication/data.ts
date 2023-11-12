@@ -323,7 +323,7 @@ export const playerBets = {
 
 export const results = {
   g11: "Hector Apelgren & Peter Apelgren",
-  g12: false,
+  g12: "Christopher Garplind & Emma Peters",
   g13: false,
   g21: false,
   g22: false,
