@@ -326,7 +326,7 @@ export const results = {
   g12: "Christopher Garplind & Emma Peters",
   g13: "Jennifer Kücükaslan & Johan Kücükaslan",
   g21: "Niklas Källner & Lena Nordlund",
-  g22: false,
+  g22: "Niklas Källner & Lena Nordlund",
   g23: false,
   g31: false,
   g32: false,
