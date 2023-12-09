@@ -327,7 +327,7 @@ export const results = {
   g13: "Jennifer Kücükaslan & Johan Kücükaslan",
   g21: "Niklas Källner & Lena Nordlund",
   g22: "Niklas Källner & Lena Nordlund",
-  g23: false,
+  g23: "Sofia Dalén & Kalle Möller",
   g31: false,
   g32: false,
   g33: false,
