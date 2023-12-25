@@ -41,13 +41,25 @@ function ContextProvider({ children }: { children: ReactNode }) {
     newPlayerBets?.players?.forEach((player) => {
       const { playerInfo, bets } = player;
       for (let i = 0; i < betKeys.length; i++) {
+        if (betKeys[i].startsWith("p2") || betKeys[i].startsWith("p3")) {
+          if (!Array.isArray(results[betKeys[10]])) return;
+
+          const semiFinals = results[betKeys[10]] as any;
+          if (bets[betKeys[i]] === semiFinals[0]) {
+            playerInfo.points += 3;
+          }
+          if (bets[betKeys[i]] === semiFinals[1]) {
+            playerInfo.points += 3;
+          }
+        }
+
         if (bets[betKeys[i]] === results[betKeys[i]]) {
           playerInfo.win += 1;
           if (betKeys[i].startsWith("g")) {
             playerInfo.points += 1;
           } else if (betKeys[i].startsWith("p4")) {
             playerInfo.points += 5;
-          } else if (betKeys[i].startsWith("p")) {
+          } else if (betKeys[i].startsWith("p1")) {
             playerInfo.points += 3;
           }
         } else if (

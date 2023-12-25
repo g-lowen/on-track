@@ -38,8 +38,8 @@ type Games = {
   g32: string | boolean;
   g33: string | boolean;
   p1: string | boolean;
-  p2: string | boolean;
-  p3: string | boolean;
+  p2: string[] | boolean;
+  p3: string[] | boolean;
   p4: string | boolean;
 };
 
