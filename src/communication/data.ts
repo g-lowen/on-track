@@ -330,7 +330,7 @@ export const results = {
   g23: "Sofia Dalén & Kalle Möller",
   g31: "Marie Agerhäll & Fritte Fritzson",
   g32: "Johan Hilton & Kristin Lundell",
-  g33: false,
+  g33: "Marie Agerhäll & Fritte Fritzson",
   p1: false,
   p2: false,
   p3: false,
